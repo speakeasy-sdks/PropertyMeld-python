@@ -1,0 +1,18 @@
+# BasePayment
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `amount`                                                             | *str*                                                                | :heavy_check_mark:                                                   | N/A                                                                  |
+| `amount_refunded`                                                    | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `check_no`                                                           | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `create_by`                                                          | dict[str, *Any*]                                                     | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `created`                                                            | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_check_mark:                                                   | N/A                                                                  |
+| `id`                                                                 | *int*                                                                | :heavy_check_mark:                                                   | N/A                                                                  |
+| `method`                                                             | [MethodEnum](../../models/shared/methodenum.md)                      | :heavy_check_mark:                                                   | N/A                                                                  |
+| `notes`                                                              | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `stripe_charge_id`                                                   | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `update_by`                                                          | dict[str, *Any*]                                                     | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `updated`                                                            | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_check_mark:                                                   | N/A                                                                  |

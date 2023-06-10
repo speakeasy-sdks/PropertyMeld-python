@@ -1,0 +1,16 @@
+# VendorAvailabilitySegment
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `assignment_request`                                                 | *int*                                                                | :heavy_check_mark:                                                   | N/A                                                                  |
+| `create_by`                                                          | dict[str, *Any*]                                                     | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `created`                                                            | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_check_mark:                                                   | N/A                                                                  |
+| `event`                                                              | [BaseEvent](../../models/shared/baseevent.md)                        | :heavy_check_mark:                                                   | N/A                                                                  |
+| `expired`                                                            | *Optional[bool]*                                                     | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `id`                                                                 | *int*                                                                | :heavy_check_mark:                                                   | N/A                                                                  |
+| `reminders_scheduled`                                                | *Optional[bool]*                                                     | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `update_by`                                                          | dict[str, *Any*]                                                     | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `updated`                                                            | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_check_mark:                                                   | N/A                                                                  |

@@ -11,9 +11,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class PropertyInput:
-    
     city: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('city') }, 'form': { 'field_name': 'city' }, 'multipart_form': { 'field_name': 'city' }})
     county_province: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('county_province') }, 'form': { 'field_name': 'county_province' }, 'multipart_form': { 'field_name': 'county_province' }})
     line_1: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('line_1') }, 'form': { 'field_name': 'line_1' }, 'multipart_form': { 'field_name': 'line_1' }})
@@ -29,10 +29,12 @@ class PropertyInput:
     units: Optional[list[int]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('units'), 'exclude': lambda f: f is None }, 'form': { 'field_name': 'units' }, 'multipart_form': { 'field_name': 'units' }})
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class Property:
-    
     city: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('city') }})
     county_province: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('county_province') }})
     created: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
@@ -51,3 +53,4 @@ class Property:
     property_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('property_name'), 'exclude': lambda f: f is None }})
     units: Optional[list[int]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('units'), 'exclude': lambda f: f is None }})
     
+

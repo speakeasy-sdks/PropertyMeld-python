@@ -8,24 +8,29 @@ from ..shared import property as shared_property
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PropertyPartialUpdateSecurity:
-    
     pmo_auth2_authentication: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class PropertyPartialUpdateRequest:
-    
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     patched_property_input: Optional[shared_patchedproperty.PatchedPropertyInput] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
+
+
+
 @dataclasses.dataclass
 class PropertyPartialUpdateResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     property: Optional[shared_property.Property] = dataclasses.field(default=None)
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

@@ -36,138 +36,138 @@ if res.paginated_building_serializer_list_list is not None:
 ## Available Resources and Operations
 
 
-### [building](docs/building/README.md)
+### [building](docs/sdks/building/README.md)
 
-* [building_list](docs/building/README.md#building_list)
-* [building_retrieve](docs/building/README.md#building_retrieve)
+* [building_list](docs/sdks/building/README.md#building_list)
+* [building_retrieve](docs/sdks/building/README.md#building_retrieve)
 
-### [check_token](docs/checktoken/README.md)
+### [check_token](docs/sdks/checktoken/README.md)
 
-* [check_token_retrieve](docs/checktoken/README.md#check_token_retrieve) - Used to check the validity of an oauth2 token
+* [check_token_retrieve](docs/sdks/checktoken/README.md#check_token_retrieve) - Used to check the validity of an oauth2 token
 
-### [estimates](docs/estimates/README.md)
+### [estimates](docs/sdks/estimates/README.md)
 
-* [estimates_list](docs/estimates/README.md#estimates_list)
-* [estimates_retrieve](docs/estimates/README.md#estimates_retrieve)
+* [estimates_list](docs/sdks/estimates/README.md#estimates_list)
+* [estimates_retrieve](docs/sdks/estimates/README.md#estimates_retrieve)
 
-### [expenditure](docs/expenditure/README.md)
+### [expenditure](docs/sdks/expenditure/README.md)
 
-* [expenditure_list](docs/expenditure/README.md#expenditure_list)
-* [expenditure_retrieve](docs/expenditure/README.md#expenditure_retrieve)
+* [expenditure_list](docs/sdks/expenditure/README.md#expenditure_list)
+* [expenditure_retrieve](docs/sdks/expenditure/README.md#expenditure_retrieve)
 
-### [floor](docs/floor/README.md)
+### [floor](docs/sdks/floor/README.md)
 
-* [floor_list](docs/floor/README.md#floor_list)
-* [floor_retrieve](docs/floor/README.md#floor_retrieve)
+* [floor_list](docs/sdks/floor/README.md#floor_list)
+* [floor_retrieve](docs/sdks/floor/README.md#floor_retrieve)
 
-### [invoice](docs/invoice/README.md)
+### [invoice](docs/sdks/invoice/README.md)
 
-* [invoice_attachment_retrieve](docs/invoice/README.md#invoice_attachment_retrieve)
-* [invoice_list](docs/invoice/README.md#invoice_list)
-* [invoice_retrieve](docs/invoice/README.md#invoice_retrieve)
+* [invoice_attachment_retrieve](docs/sdks/invoice/README.md#invoice_attachment_retrieve)
+* [invoice_list](docs/sdks/invoice/README.md#invoice_list)
+* [invoice_retrieve](docs/sdks/invoice/README.md#invoice_retrieve)
 
-### [management_agent](docs/managementagent/README.md)
+### [management_agent](docs/sdks/managementagent/README.md)
 
-* [management_agent_list](docs/managementagent/README.md#management_agent_list)
-* [management_agent_retrieve](docs/managementagent/README.md#management_agent_retrieve)
+* [management_agent_list](docs/sdks/managementagent/README.md#management_agent_list)
+* [management_agent_retrieve](docs/sdks/managementagent/README.md#management_agent_retrieve)
 
-### [manager_file](docs/managerfile/README.md)
+### [manager_file](docs/sdks/managerfile/README.md)
 
-* [manager_file_list](docs/managerfile/README.md#manager_file_list)
+* [manager_file_list](docs/sdks/managerfile/README.md#manager_file_list)
 
-### [meld](docs/meld/README.md)
+### [meld](docs/sdks/meld/README.md)
 
-* [meld_list](docs/meld/README.md#meld_list)
-* [meld_manager_files_list](docs/meld/README.md#meld_manager_files_list)
-* [meld_retrieve](docs/meld/README.md#meld_retrieve)
-* [meld_tenant_files_list](docs/meld/README.md#meld_tenant_files_list)
-* [meld_vendor_files_list](docs/meld/README.md#meld_vendor_files_list)
+* [meld_list](docs/sdks/meld/README.md#meld_list)
+* [meld_manager_files_list](docs/sdks/meld/README.md#meld_manager_files_list)
+* [meld_retrieve](docs/sdks/meld/README.md#meld_retrieve)
+* [meld_tenant_files_list](docs/sdks/meld/README.md#meld_tenant_files_list)
+* [meld_vendor_files_list](docs/sdks/meld/README.md#meld_vendor_files_list)
 
-### [owner](docs/owner/README.md)
+### [owner](docs/sdks/owner/README.md)
 
-* [owner_create](docs/owner/README.md#owner_create)
-* [owner_destroy](docs/owner/README.md#owner_destroy)
-* [owner_list](docs/owner/README.md#owner_list)
-* [owner_partial_update](docs/owner/README.md#owner_partial_update)
-* [owner_retrieve](docs/owner/README.md#owner_retrieve)
-* [owner_update](docs/owner/README.md#owner_update)
+* [owner_create](docs/sdks/owner/README.md#owner_create)
+* [owner_destroy](docs/sdks/owner/README.md#owner_destroy)
+* [owner_list](docs/sdks/owner/README.md#owner_list)
+* [owner_partial_update](docs/sdks/owner/README.md#owner_partial_update)
+* [owner_retrieve](docs/sdks/owner/README.md#owner_retrieve)
+* [owner_update](docs/sdks/owner/README.md#owner_update)
 
-### [ping](docs/ping/README.md)
+### [ping](docs/sdks/ping/README.md)
 
-* [ping_retrieve](docs/ping/README.md#ping_retrieve) - Used to double check that the api is up an running.
+* [ping_retrieve](docs/sdks/ping/README.md#ping_retrieve) - Used to double check that the api is up an running.
 
-### [project](docs/project/README.md)
+### [project](docs/sdks/project/README.md)
 
-* [project_list](docs/project/README.md#project_list)
-* [project_retrieve](docs/project/README.md#project_retrieve)
+* [project_list](docs/sdks/project/README.md#project_list)
+* [project_retrieve](docs/sdks/project/README.md#project_retrieve)
 
-### [property](docs/property/README.md)
+### [property](docs/sdks/property/README.md)
 
-* [property_create](docs/property/README.md#property_create)
-* [property_destroy](docs/property/README.md#property_destroy)
-* [property_list](docs/property/README.md#property_list)
-* [property_partial_update](docs/property/README.md#property_partial_update)
-* [property_retrieve](docs/property/README.md#property_retrieve)
-* [property_update](docs/property/README.md#property_update)
+* [property_create](docs/sdks/property/README.md#property_create)
+* [property_destroy](docs/sdks/property/README.md#property_destroy)
+* [property_list](docs/sdks/property/README.md#property_list)
+* [property_partial_update](docs/sdks/property/README.md#property_partial_update)
+* [property_retrieve](docs/sdks/property/README.md#property_retrieve)
+* [property_update](docs/sdks/property/README.md#property_update)
 
-### [property_group](docs/propertygroup/README.md)
+### [property_group](docs/sdks/propertygroup/README.md)
 
-* [property_group_list](docs/propertygroup/README.md#property_group_list)
-* [property_group_retrieve](docs/propertygroup/README.md#property_group_retrieve)
+* [property_group_list](docs/sdks/propertygroup/README.md#property_group_list)
+* [property_group_retrieve](docs/sdks/propertygroup/README.md#property_group_retrieve)
 
-### [resident](docs/resident/README.md)
+### [resident](docs/sdks/resident/README.md)
 
-* [resident_create_form](docs/resident/README.md#resident_create_form)
-* [resident_create_json](docs/resident/README.md#resident_create_json)
-* [resident_create_multipart](docs/resident/README.md#resident_create_multipart)
-* [resident_destroy](docs/resident/README.md#resident_destroy)
-* [resident_list](docs/resident/README.md#resident_list)
-* [resident_partial_update_form](docs/resident/README.md#resident_partial_update_form)
-* [resident_partial_update_json](docs/resident/README.md#resident_partial_update_json)
-* [resident_partial_update_multipart](docs/resident/README.md#resident_partial_update_multipart)
-* [resident_retrieve](docs/resident/README.md#resident_retrieve)
-* [resident_update_form](docs/resident/README.md#resident_update_form)
-* [resident_update_json](docs/resident/README.md#resident_update_json)
-* [resident_update_multipart](docs/resident/README.md#resident_update_multipart)
+* [resident_create_form](docs/sdks/resident/README.md#resident_create_form)
+* [resident_create_json](docs/sdks/resident/README.md#resident_create_json)
+* [resident_create_multipart](docs/sdks/resident/README.md#resident_create_multipart)
+* [resident_destroy](docs/sdks/resident/README.md#resident_destroy)
+* [resident_list](docs/sdks/resident/README.md#resident_list)
+* [resident_partial_update_form](docs/sdks/resident/README.md#resident_partial_update_form)
+* [resident_partial_update_json](docs/sdks/resident/README.md#resident_partial_update_json)
+* [resident_partial_update_multipart](docs/sdks/resident/README.md#resident_partial_update_multipart)
+* [resident_retrieve](docs/sdks/resident/README.md#resident_retrieve)
+* [resident_update_form](docs/sdks/resident/README.md#resident_update_form)
+* [resident_update_json](docs/sdks/resident/README.md#resident_update_json)
+* [resident_update_multipart](docs/sdks/resident/README.md#resident_update_multipart)
 
-### [resident_file](docs/residentfile/README.md)
+### [resident_file](docs/sdks/residentfile/README.md)
 
-* [resident_file_list](docs/residentfile/README.md#resident_file_list)
+* [resident_file_list](docs/sdks/residentfile/README.md#resident_file_list)
 
-### [schema](docs/schema/README.md)
+### [schema](docs/sdks/schema/README.md)
 
-* [schema_retrieve](docs/schema/README.md#schema_retrieve) - OpenApi3 schema for this API. Format can be selected via content negotiation.
+* [schema_retrieve](docs/sdks/schema/README.md#schema_retrieve) - OpenApi3 schema for this API. Format can be selected via content negotiation.
 
 - YAML: application/vnd.oai.openapi
 - JSON: application/vnd.oai.openapi+json
 
-### [unit](docs/unit/README.md)
+### [unit](docs/sdks/unit/README.md)
 
-* [unit_create](docs/unit/README.md#unit_create)
-* [unit_destroy](docs/unit/README.md#unit_destroy)
-* [unit_list](docs/unit/README.md#unit_list)
-* [unit_partial_update](docs/unit/README.md#unit_partial_update)
-* [unit_retrieve](docs/unit/README.md#unit_retrieve)
-* [unit_update](docs/unit/README.md#unit_update)
+* [unit_create](docs/sdks/unit/README.md#unit_create)
+* [unit_destroy](docs/sdks/unit/README.md#unit_destroy)
+* [unit_list](docs/sdks/unit/README.md#unit_list)
+* [unit_partial_update](docs/sdks/unit/README.md#unit_partial_update)
+* [unit_retrieve](docs/sdks/unit/README.md#unit_retrieve)
+* [unit_update](docs/sdks/unit/README.md#unit_update)
 
-### [vendor](docs/vendor/README.md)
+### [vendor](docs/sdks/vendor/README.md)
 
-* [vendor_destroy](docs/vendor/README.md#vendor_destroy)
-* [vendor_list](docs/vendor/README.md#vendor_list)
-* [vendor_retrieve](docs/vendor/README.md#vendor_retrieve)
+* [vendor_destroy](docs/sdks/vendor/README.md#vendor_destroy)
+* [vendor_list](docs/sdks/vendor/README.md#vendor_list)
+* [vendor_retrieve](docs/sdks/vendor/README.md#vendor_retrieve)
 
-### [vendor_file](docs/vendorfile/README.md)
+### [vendor_file](docs/sdks/vendorfile/README.md)
 
-* [vendor_file_list](docs/vendorfile/README.md#vendor_file_list)
+* [vendor_file_list](docs/sdks/vendorfile/README.md#vendor_file_list)
 
-### [vendor_invite](docs/vendorinvite/README.md)
+### [vendor_invite](docs/sdks/vendorinvite/README.md)
 
-* [vendor_invite_create](docs/vendorinvite/README.md#vendor_invite_create)
+* [vendor_invite_create](docs/sdks/vendorinvite/README.md#vendor_invite_create)
 
-### [work_log](docs/worklog/README.md)
+### [work_log](docs/sdks/worklog/README.md)
 
-* [work_log_list](docs/worklog/README.md#work_log_list)
-* [work_log_retrieve](docs/worklog/README.md#work_log_retrieve)
+* [work_log_list](docs/sdks/worklog/README.md#work_log_list)
+* [work_log_retrieve](docs/sdks/worklog/README.md#work_log_retrieve)
 <!-- End SDK Available Operations -->
 
 ### Maturity

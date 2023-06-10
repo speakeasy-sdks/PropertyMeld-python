@@ -11,9 +11,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class MeldExpendituresListProperty:
-    
     created: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
     postcode: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('postcode') }})
@@ -28,3 +28,4 @@ class MeldExpendituresListProperty:
     other_address_details: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('other_address_details'), 'exclude': lambda f: f is None }})
     property_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('property_name'), 'exclude': lambda f: f is None }})
     
+

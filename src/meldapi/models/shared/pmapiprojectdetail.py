@@ -14,9 +14,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class PmAPIProjectDetail:
-    
     coordinators: list[shared_managementagent.ManagementAgent] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('coordinators') }})
     created: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     due_date: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('due_date'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
@@ -29,3 +29,4 @@ class PmAPIProjectDetail:
     project_type: Optional[shared_projecttypeenum.ProjectTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('project_type'), 'exclude': lambda f: f is None }})
     unit: Optional[shared_pmapiunit.PmAPIUnit] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unit'), 'exclude': lambda f: f is None }})
     
+

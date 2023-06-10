@@ -1,0 +1,18 @@
+# PMAPIVendorMeldFile
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `cloned`                                                             | *Optional[bool]*                                                     | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `created`                                                            | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_check_mark:                                                   | N/A                                                                  |
+| `filename`                                                           | *str*                                                                | :heavy_check_mark:                                                   | N/A                                                                  |
+| `hidden_from_owner`                                                  | *Optional[bool]*                                                     | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `hidden_from_tenant`                                                 | *Optional[bool]*                                                     | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `hidden_from_vendor`                                                 | *Optional[bool]*                                                     | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `id`                                                                 | *int*                                                                | :heavy_check_mark:                                                   | N/A                                                                  |
+| `meld`                                                               | *int*                                                                | :heavy_check_mark:                                                   | N/A                                                                  |
+| `updated`                                                            | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_check_mark:                                                   | N/A                                                                  |
+| `uploader`                                                           | *int*                                                                | :heavy_check_mark:                                                   | N/A                                                                  |
+| `url`                                                                | *str*                                                                | :heavy_check_mark:                                                   | N/A                                                                  |

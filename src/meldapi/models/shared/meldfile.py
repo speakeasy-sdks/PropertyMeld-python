@@ -11,9 +11,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class MeldFile:
-    
     cloned: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cloned') }})
     created: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     filename: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filename') }})
@@ -26,3 +26,4 @@ class MeldFile:
     hidden_from_vendor: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hidden_from_vendor'), 'exclude': lambda f: f is None }})
     uploader: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('uploader'), 'exclude': lambda f: f is None }})
     
+

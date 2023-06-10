@@ -8,9 +8,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class PatchedPropertyInput:
-    
     city: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('city'), 'exclude': lambda f: f is None }, 'form': { 'field_name': 'city' }, 'multipart_form': { 'field_name': 'city' }})
     country: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('country'), 'exclude': lambda f: f is None }, 'form': { 'field_name': 'country' }, 'multipart_form': { 'field_name': 'country' }})
     county_province: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('county_province'), 'exclude': lambda f: f is None }, 'form': { 'field_name': 'county_province' }, 'multipart_form': { 'field_name': 'county_province' }})
@@ -25,3 +25,4 @@ class PatchedPropertyInput:
     property_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('property_name'), 'exclude': lambda f: f is None }, 'form': { 'field_name': 'property_name' }, 'multipart_form': { 'field_name': 'property_name' }})
     units: Optional[list[int]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('units'), 'exclude': lambda f: f is None }, 'form': { 'field_name': 'units' }, 'multipart_form': { 'field_name': 'units' }})
     
+

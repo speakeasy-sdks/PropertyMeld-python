@@ -8,9 +8,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class Address:
-    
     city: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('city') }})
     county_province: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('county_province') }})
     line_1: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('line_1') }})
@@ -19,3 +19,4 @@ class Address:
     line_2: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('line_2'), 'exclude': lambda f: f is None }})
     line_3: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('line_3'), 'exclude': lambda f: f is None }})
     
+

@@ -11,9 +11,9 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class MeldListViewProperty:
-    
     created: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
     postcode: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('postcode') }})
@@ -34,3 +34,4 @@ class MeldListViewProperty:
     supplemental_data: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('supplemental_data'), 'exclude': lambda f: f is None }})
     update_by: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('update_by'), 'exclude': lambda f: f is None }})
     
+

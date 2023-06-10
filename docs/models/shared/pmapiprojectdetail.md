@@ -1,0 +1,18 @@
+# PmAPIProjectDetail
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `coordinators`                                                       | list[[ManagementAgent](../../models/shared/managementagent.md)]      | :heavy_check_mark:                                                   | N/A                                                                  |
+| `created`                                                            | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_check_mark:                                                   | N/A                                                                  |
+| `description`                                                        | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `due_date`                                                           | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_check_mark:                                                   | N/A                                                                  |
+| `id`                                                                 | *int*                                                                | :heavy_check_mark:                                                   | N/A                                                                  |
+| `melds`                                                              | list[*int*]                                                          | :heavy_check_mark:                                                   | N/A                                                                  |
+| `name`                                                               | *str*                                                                | :heavy_check_mark:                                                   | N/A                                                                  |
+| `project_type`                                                       | [Optional[ProjectTypeEnum]](../../models/shared/projecttypeenum.md)  | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `start_date`                                                         | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_check_mark:                                                   | N/A                                                                  |
+| `unit`                                                               | [Optional[PmAPIUnit]](../../models/shared/pmapiunit.md)              | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `updated`                                                            | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_check_mark:                                                   | N/A                                                                  |

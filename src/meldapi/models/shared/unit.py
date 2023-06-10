@@ -12,9 +12,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class UnitInput:
-    
     property_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('property_id') }, 'form': { 'field_name': 'property_id' }, 'multipart_form': { 'field_name': 'property_id' }})
     approval_currency_limit: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('approval_currency_limit'), 'exclude': lambda f: f is None }, 'form': { 'field_name': 'approval_currency_limit' }, 'multipart_form': { 'field_name': 'approval_currency_limit' }})
     current_residents: Optional[list[int]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('current_residents'), 'exclude': lambda f: f is None }, 'form': { 'field_name': 'current_residents' }, 'multipart_form': { 'field_name': 'current_residents' }})
@@ -24,10 +24,12 @@ class UnitInput:
     unit_address: Optional[shared_address.Address] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unit_address'), 'exclude': lambda f: f is None }, 'form': { 'field_name': 'unit_address', 'json': True }, 'multipart_form': { 'field_name': 'unit_address', 'json': True }})
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class Unit:
-    
     created: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
     is_active: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_active') }})
@@ -40,3 +42,4 @@ class Unit:
     r"""This field indicates the particular dwelling within a larger building or complex. For example, in the address 123 Main St, Unit 302, the unit is 302"""
     unit_address: Optional[shared_address.Address] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unit_address'), 'exclude': lambda f: f is None }})
     
+

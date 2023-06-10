@@ -1,0 +1,16 @@
+# MeldListViewInviteAssignment
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `accepted`                                                           | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `canceled`                                                           | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `create_by`                                                          | dict[str, *Any*]                                                     | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `created`                                                            | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_check_mark:                                                   | N/A                                                                  |
+| `id`                                                                 | *int*                                                                | :heavy_check_mark:                                                   | N/A                                                                  |
+| `invite_group`                                                       | [InviteGroup](../../models/shared/invitegroup.md)                    | :heavy_check_mark:                                                   | N/A                                                                  |
+| `meld`                                                               | *int*                                                                | :heavy_check_mark:                                                   | N/A                                                                  |
+| `update_by`                                                          | dict[str, *Any*]                                                     | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `updated`                                                            | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_check_mark:                                                   | N/A                                                                  |

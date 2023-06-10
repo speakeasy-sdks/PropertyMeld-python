@@ -7,25 +7,30 @@ from ..shared import propertygroupserializerdetail as shared_propertygroupserial
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PropertyGroupRetrieveSecurity:
-    
     pmo_auth2_authentication: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class PropertyGroupRetrieveRequest:
-    
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     x_pm_org: int = dataclasses.field(metadata={'header': { 'field_name': 'X-Pm-Org', 'style': 'simple', 'explode': False }})
     r"""The management ID (MID), found in the first number of your URL when logged in:  https://app.propertymeld.com/{MID}/m/123"""
     
 
+
+
+
 @dataclasses.dataclass
 class PropertyGroupRetrieveResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     property_group_serializer_detail: Optional[shared_propertygroupserializerdetail.PropertyGroupSerializerDetail] = dataclasses.field(default=None)
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

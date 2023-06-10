@@ -1,0 +1,15 @@
+# OwnerInput
+
+
+## Fields
+
+| Field                                                                     | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `address`                                                                 | [Optional[Address]](../../models/shared/address.md)                       | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `contact`                                                                 | [Optional[Contact]](../../models/shared/contact.md)                       | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `email`                                                                   | *str*                                                                     | :heavy_check_mark:                                                        | N/A                                                                       |
+| `first_name`                                                              | *str*                                                                     | :heavy_check_mark:                                                        | N/A                                                                       |
+| `hub_access_level`                                                        | [Optional[HubAccessLevelEnum]](../../models/shared/hubaccesslevelenum.md) | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `invited_to_hub`                                                          | *Optional[bool]*                                                          | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `last_name`                                                               | *str*                                                                     | :heavy_check_mark:                                                        | N/A                                                                       |
+| `properties`                                                              | list[*int*]                                                               | :heavy_minus_sign:                                                        | N/A                                                                       |

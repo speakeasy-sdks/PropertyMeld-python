@@ -25,9 +25,9 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class MeldSerializerListManagementAgentCloser:
-    
     agent_preferences: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('agent_preferences') }})
     created: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
@@ -49,10 +49,12 @@ class MeldSerializerListManagementAgentCloser:
     user: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('user'), 'exclude': lambda f: f is None }})
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class MeldSerializerListManagementappointment:
-    
     availability_segment: shared_meldlistviewmanagementavailabilitysegment.MeldListviewManagementAvailabilitySegment = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('availability_segment') }})
     created: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
@@ -62,10 +64,12 @@ class MeldSerializerListManagementappointment:
     update_by: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('update_by'), 'exclude': lambda f: f is None }})
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class MeldSerializerListManagerCanceller:
-    
     agent_preferences: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('agent_preferences') }})
     created: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
@@ -87,10 +91,12 @@ class MeldSerializerListManagerCanceller:
     user: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('user'), 'exclude': lambda f: f is None }})
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class MeldSerializerListMeldExpenditures:
-    
     created: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
     meld: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meld') }})
@@ -102,10 +108,12 @@ class MeldSerializerListMeldExpenditures:
     update_by: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('update_by'), 'exclude': lambda f: f is None }})
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class MeldSerializerListVendorCloser:
-    
     address: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address') }})
     created: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     excluded_property_groups: list[int] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('excluded_property_groups') }})
@@ -121,10 +129,12 @@ class MeldSerializerListVendorCloser:
     update_by: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('update_by'), 'exclude': lambda f: f is None }})
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class MeldSerializerListVendorappointment:
-    
     assignment_request: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('assignment_request') }})
     availability_segment: shared_vendoravailabilitysegment.VendorAvailabilitySegment = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('availability_segment') }})
     created: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
@@ -135,10 +145,12 @@ class MeldSerializerListVendorappointment:
     update_by: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('update_by'), 'exclude': lambda f: f is None }})
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class MeldSerializerListOutput:
-    
     assigner: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('assigner') }})
     brief_description: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('brief_description') }})
     created: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
@@ -203,3 +215,4 @@ class MeldSerializerListOutput:
     update_by: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('update_by'), 'exclude': lambda f: f is None }})
     vendor_assignment_requests: Optional[list[shared_vendorassignmentrequest.VendorAssignmentRequest]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vendor_assignment_requests'), 'exclude': lambda f: f is None }})
     
+

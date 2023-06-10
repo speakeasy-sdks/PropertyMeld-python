@@ -16,9 +16,9 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class MeldExpendituresListMeld:
-    
     assigner: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('assigner') }})
     brief_description: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('brief_description') }})
     created: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
@@ -64,3 +64,4 @@ class MeldExpendituresListMeld:
     tenant_review_date: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tenant_review_date'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso'), 'exclude': lambda f: f is None }})
     vendor_closer: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vendor_closer'), 'exclude': lambda f: f is None }})
     
+

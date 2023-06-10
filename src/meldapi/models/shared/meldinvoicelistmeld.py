@@ -13,9 +13,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class MeldInvoiceListMeld:
-    
     brief_description: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('brief_description') }})
     created: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
@@ -23,3 +23,4 @@ class MeldInvoiceListMeld:
     unit: shared_meldinvoicelistviewunit.MeldInvoiceListViewUnit = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unit') }})
     reference_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reference_id'), 'exclude': lambda f: f is None }})
     
+

@@ -1,0 +1,11 @@
+# NotificationSettingsInput
+
+
+## Fields
+
+| Field                                                                                       | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `incoming_meld_frequency`                                                                   | [Optional[IncomingMeldFrequencyEnum]](../../models/shared/incomingmeldfrequencyenum.md)     | :heavy_minus_sign:                                                                          | N/A                                                                                         |
+| `sms_notifications`                                                                         | *Optional[bool]*                                                                            | :heavy_minus_sign:                                                                          | N/A                                                                                         |
+| `successful_meld_frequency`                                                                 | [Optional[SuccessfulMeldFrequencyEnum]](../../models/shared/successfulmeldfrequencyenum.md) | :heavy_minus_sign:                                                                          | N/A                                                                                         |
+| `timezone`                                                                                  | [Optional[TimezoneEnum]](../../models/shared/timezoneenum.md)                               | :heavy_minus_sign:                                                                          | N/A                                                                                         |

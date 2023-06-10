@@ -7,23 +7,28 @@ from ..shared import vendor as shared_vendor
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class VendorRetrieveSecurity:
-    
     pmo_auth2_authentication: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class VendorRetrieveRequest:
-    
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
+
+
+
 @dataclasses.dataclass
 class VendorRetrieveResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     vendor: Optional[shared_vendor.Vendor] = dataclasses.field(default=None)
     
+

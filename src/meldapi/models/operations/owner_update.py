@@ -7,24 +7,29 @@ from ..shared import owner as shared_owner
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class OwnerUpdateSecurity:
-    
     pmo_auth2_authentication: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class OwnerUpdateRequest:
-    
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     owner_input: shared_owner.OwnerInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
+
+
+
 @dataclasses.dataclass
 class OwnerUpdateResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     owner: Optional[shared_owner.Owner] = dataclasses.field(default=None)
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

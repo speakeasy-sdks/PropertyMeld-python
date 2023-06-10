@@ -9,9 +9,9 @@ from meldapi import utils
 from typing import Any, Optional
 
 
+
 @dataclasses.dataclass
 class PatchedResidentInput1:
-    
     address: Optional[Any] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'address', 'json': True }, 'multipart_form': { 'field_name': 'address', 'json': True }})
     contact: Optional[shared_contact.Contact] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'contact', 'json': True }, 'multipart_form': { 'field_name': 'contact', 'json': True }})
     first_name: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'first_name' }, 'multipart_form': { 'field_name': 'first_name' }})
@@ -24,10 +24,12 @@ class PatchedResidentInput1:
     units: Optional[list[int]] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'units' }, 'multipart_form': { 'field_name': 'units' }})
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class PatchedResidentAddress:
-    
     city: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('city') }})
     county_province: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('county_province') }})
     line_1: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('line_1') }})
@@ -37,10 +39,12 @@ class PatchedResidentAddress:
     line_3: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('line_3'), 'exclude': lambda f: f is None }})
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class PatchedResidentInput:
-    
     address: Optional[PatchedResidentAddress] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address'), 'exclude': lambda f: f is None }})
     contact: Optional[shared_contact.Contact] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('contact'), 'exclude': lambda f: f is None }})
     first_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('first_name'), 'exclude': lambda f: f is None }})
@@ -52,3 +56,4 @@ class PatchedResidentInput:
     notification_settings: Optional[shared_notificationsettings.NotificationSettingsInput] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('notification_settings'), 'exclude': lambda f: f is None }})
     units: Optional[list[int]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('units'), 'exclude': lambda f: f is None }})
     
+

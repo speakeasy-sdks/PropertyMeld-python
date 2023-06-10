@@ -8,9 +8,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class Contact:
-    
     business_phone: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('business_phone'), 'exclude': lambda f: f is None }})
     r"""Home phone number. Must be in E.164 format, e.g. '+14155552671'."""
     business_phone_ext: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('business_phone_ext'), 'exclude': lambda f: f is None }})
@@ -25,3 +25,4 @@ class Contact:
     secondary_email: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('secondary_email'), 'exclude': lambda f: f is None }})
     tertiary_email: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tertiary_email'), 'exclude': lambda f: f is None }})
     
+

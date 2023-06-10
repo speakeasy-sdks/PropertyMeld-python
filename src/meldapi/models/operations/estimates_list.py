@@ -8,11 +8,13 @@ from enum import Enum
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class EstimatesListSecurity:
-    
     pmo_auth2_authentication: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
+
+
 class EstimatesListEstimateStatus(str, Enum):
     ESTIMATE_APPROVED = 'ESTIMATE_APPROVED'
     ESTIMATE_CLOSED = 'ESTIMATE_CLOSED'
@@ -24,9 +26,9 @@ class EstimatesListEstimateStatus(str, Enum):
     ESTIMATE_VENDOR_REJECTED = 'ESTIMATE_VENDOR_REJECTED'
 
 
+
 @dataclasses.dataclass
 class EstimatesListRequest:
-    
     x_pm_org: int = dataclasses.field(metadata={'header': { 'field_name': 'X-Pm-Org', 'style': 'simple', 'explode': False }})
     r"""The management ID (MID), found in the first number of your URL when logged in:  https://app.propertymeld.com/{MID}/m/123"""
     estimate_status: Optional[list[EstimatesListEstimateStatus]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'estimate_status', 'style': 'form', 'explode': True }})
@@ -38,11 +40,14 @@ class EstimatesListRequest:
     r"""Which field to use when ordering the results."""
     
 
+
+
+
 @dataclasses.dataclass
 class EstimatesListResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     paginated_estimate_serializer_list_list: Optional[shared_paginatedestimateserializerlistlist.PaginatedEstimateSerializerListList] = dataclasses.field(default=None)
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

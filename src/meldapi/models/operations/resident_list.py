@@ -7,15 +7,17 @@ from ..shared import paginatedresidentlist as shared_paginatedresidentlist
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class ResidentListSecurity:
-    
     pmo_auth2_authentication: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class ResidentListRequest:
-    
     limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
     r"""Number of results to return per page."""
     offset: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
@@ -24,11 +26,14 @@ class ResidentListRequest:
     r"""Which field to use when ordering the results."""
     
 
+
+
+
 @dataclasses.dataclass
 class ResidentListResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     paginated_resident_list: Optional[shared_paginatedresidentlist.PaginatedResidentList] = dataclasses.field(default=None)
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

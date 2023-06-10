@@ -7,25 +7,30 @@ from ..shared import workentryserializerdetail as shared_workentryserializerdeta
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class WorkLogRetrieveSecurity:
-    
     pmo_auth2_authentication: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class WorkLogRetrieveRequest:
-    
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     x_pm_org: int = dataclasses.field(metadata={'header': { 'field_name': 'X-Pm-Org', 'style': 'simple', 'explode': False }})
     r"""The management ID (MID), found in the first number of your URL when logged in:  https://app.propertymeld.com/{MID}/m/123"""
     
 
+
+
+
 @dataclasses.dataclass
 class WorkLogRetrieveResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     work_entry_serializer_detail: Optional[shared_workentryserializerdetail.WorkEntrySerializerDetail] = dataclasses.field(default=None)
     
+

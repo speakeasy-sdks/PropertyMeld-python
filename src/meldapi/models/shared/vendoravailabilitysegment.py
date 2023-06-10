@@ -12,9 +12,9 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class VendorAvailabilitySegment:
-    
     assignment_request: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('assignment_request') }})
     created: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     event: shared_baseevent.BaseEvent = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('event') }})
@@ -25,3 +25,4 @@ class VendorAvailabilitySegment:
     reminders_scheduled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reminders_scheduled'), 'exclude': lambda f: f is None }})
     update_by: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('update_by'), 'exclude': lambda f: f is None }})
     
+

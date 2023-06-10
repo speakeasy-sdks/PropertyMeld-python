@@ -9,9 +9,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class PatchedUnitInput:
-    
     approval_currency_limit: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('approval_currency_limit'), 'exclude': lambda f: f is None }, 'form': { 'field_name': 'approval_currency_limit' }, 'multipart_form': { 'field_name': 'approval_currency_limit' }})
     current_residents: Optional[list[int]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('current_residents'), 'exclude': lambda f: f is None }, 'form': { 'field_name': 'current_residents' }, 'multipart_form': { 'field_name': 'current_residents' }})
     maintenance_notes: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('maintenance_notes'), 'exclude': lambda f: f is None }, 'form': { 'field_name': 'maintenance_notes' }, 'multipart_form': { 'field_name': 'maintenance_notes' }})
@@ -20,3 +20,4 @@ class PatchedUnitInput:
     r"""This field indicates the particular dwelling within a larger building or complex. For example, in the address 123 Main St, Unit 302, the unit is 302"""
     unit_address: Optional[shared_address.Address] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unit_address'), 'exclude': lambda f: f is None }, 'form': { 'field_name': 'unit_address', 'json': True }, 'multipart_form': { 'field_name': 'unit_address', 'json': True }})
     
+

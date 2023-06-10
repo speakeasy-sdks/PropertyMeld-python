@@ -8,9 +8,10 @@ from meldapi import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class MeldListViewInHouseMeldServicer:
-    
     agent: shared_meldlistviewmanagementagent.MeldListViewManagementAgent = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('agent') }})
     id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
     
+

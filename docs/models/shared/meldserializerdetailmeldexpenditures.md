@@ -1,0 +1,16 @@
+# MeldSerializerDetailMeldExpenditures
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `amount`                                                             | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `create_by`                                                          | dict[str, *Any*]                                                     | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `created`                                                            | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_check_mark:                                                   | N/A                                                                  |
+| `id`                                                                 | *int*                                                                | :heavy_check_mark:                                                   | N/A                                                                  |
+| `meld`                                                               | *int*                                                                | :heavy_check_mark:                                                   | N/A                                                                  |
+| `notes`                                                              | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `status`                                                             | [Optional[StatusD0bEnum]](../../models/shared/statusd0benum.md)      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `update_by`                                                          | dict[str, *Any*]                                                     | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `updated`                                                            | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_check_mark:                                                   | N/A                                                                  |

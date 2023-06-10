@@ -7,17 +7,20 @@ from ..shared import unit as shared_unit
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class UnitCreateSecurity:
-    
     pmo_auth2_authentication: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class UnitCreateResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     unit: Optional[shared_unit.Unit] = dataclasses.field(default=None)
     
+

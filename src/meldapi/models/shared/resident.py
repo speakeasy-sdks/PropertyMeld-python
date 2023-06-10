@@ -12,9 +12,9 @@ from meldapi import utils
 from typing import Any, Optional
 
 
+
 @dataclasses.dataclass
 class ResidentInput1:
-    
     first_name: str = dataclasses.field(metadata={'form': { 'field_name': 'first_name' }, 'multipart_form': { 'field_name': 'first_name' }})
     last_name: str = dataclasses.field(metadata={'form': { 'field_name': 'last_name' }, 'multipart_form': { 'field_name': 'last_name' }})
     address: Optional[Any] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'address', 'json': True }, 'multipart_form': { 'field_name': 'address', 'json': True }})
@@ -27,10 +27,12 @@ class ResidentInput1:
     units: Optional[list[int]] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'units' }, 'multipart_form': { 'field_name': 'units' }})
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ResidentAddress:
-    
     city: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('city') }})
     county_province: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('county_province') }})
     line_1: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('line_1') }})
@@ -40,10 +42,12 @@ class ResidentAddress:
     line_3: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('line_3'), 'exclude': lambda f: f is None }})
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class Resident:
-    
     created: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     first_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('first_name') }})
     id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
@@ -60,10 +64,12 @@ class Resident:
     units: Optional[list[int]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('units'), 'exclude': lambda f: f is None }})
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ResidentInput:
-    
     first_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('first_name') }})
     last_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last_name') }})
     address: Optional[ResidentAddress] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address'), 'exclude': lambda f: f is None }})
@@ -75,3 +81,4 @@ class ResidentInput:
     notification_settings: Optional[shared_notificationsettings.NotificationSettingsInput] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('notification_settings'), 'exclude': lambda f: f is None }})
     units: Optional[list[int]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('units'), 'exclude': lambda f: f is None }})
     
+

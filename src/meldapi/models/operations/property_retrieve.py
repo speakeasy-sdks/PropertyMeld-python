@@ -7,23 +7,28 @@ from ..shared import property as shared_property
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PropertyRetrieveSecurity:
-    
     pmo_auth2_authentication: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class PropertyRetrieveRequest:
-    
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
+
+
+
 @dataclasses.dataclass
 class PropertyRetrieveResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     property: Optional[shared_property.Property] = dataclasses.field(default=None)
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

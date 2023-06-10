@@ -7,15 +7,17 @@ from ..shared import paginatedvendorlist as shared_paginatedvendorlist
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class VendorListSecurity:
-    
     pmo_auth2_authentication: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class VendorListRequest:
-    
     x_pm_org: int = dataclasses.field(metadata={'header': { 'field_name': 'X-Pm-Org', 'style': 'simple', 'explode': False }})
     r"""The management ID (MID), found in the first number of your URL when logged in:  https://app.propertymeld.com/{MID}/m/123"""
     limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
@@ -26,11 +28,14 @@ class VendorListRequest:
     r"""Which field to use when ordering the results."""
     
 
+
+
+
 @dataclasses.dataclass
 class VendorListResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     paginated_vendor_list: Optional[shared_paginatedvendorlist.PaginatedVendorList] = dataclasses.field(default=None)
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

@@ -7,24 +7,29 @@ from ..shared import resident as shared_resident
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class ResidentUpdateFormSecurity:
-    
     pmo_auth2_authentication: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class ResidentUpdateFormRequest:
-    
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     resident_input1: shared_resident.ResidentInput1 = dataclasses.field(metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
     
 
+
+
+
 @dataclasses.dataclass
 class ResidentUpdateFormResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     resident: Optional[shared_resident.Resident] = dataclasses.field(default=None)
     
+

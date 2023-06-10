@@ -7,15 +7,17 @@ from ..shared import paginatedpropertylist as shared_paginatedpropertylist
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PropertyListSecurity:
-    
     pmo_auth2_authentication: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class PropertyListRequest:
-    
     limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
     r"""Number of results to return per page."""
     offset: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
@@ -24,11 +26,14 @@ class PropertyListRequest:
     r"""Which field to use when ordering the results."""
     
 
+
+
+
 @dataclasses.dataclass
 class PropertyListResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     paginated_property_list: Optional[shared_paginatedpropertylist.PaginatedPropertyList] = dataclasses.field(default=None)
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

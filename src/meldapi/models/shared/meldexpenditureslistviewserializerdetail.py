@@ -14,9 +14,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class MeldExpendituresListViewSerializerDetail:
-    
     amount: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount') }})
     created: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     expenditures_line_items: list[shared_meldexpenditureslistlineitem.MeldExpendituresListLineItem] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expenditures_line_items') }})
@@ -26,3 +26,4 @@ class MeldExpendituresListViewSerializerDetail:
     notes: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('notes'), 'exclude': lambda f: f is None }})
     status: Optional[shared_statusd0benum.StatusD0bEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     
+

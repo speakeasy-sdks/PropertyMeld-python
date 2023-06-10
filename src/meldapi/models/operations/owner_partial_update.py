@@ -8,24 +8,29 @@ from ..shared import patchedowner as shared_patchedowner
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class OwnerPartialUpdateSecurity:
-    
     pmo_auth2_authentication: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class OwnerPartialUpdateRequest:
-    
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     patched_owner_input: Optional[shared_patchedowner.PatchedOwnerInput] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
+
+
+
 @dataclasses.dataclass
 class OwnerPartialUpdateResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     owner: Optional[shared_owner.Owner] = dataclasses.field(default=None)
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

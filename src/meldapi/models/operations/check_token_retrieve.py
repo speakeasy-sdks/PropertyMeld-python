@@ -6,17 +6,20 @@ import requests as requests_http
 from typing import Any, Optional
 
 
+
 @dataclasses.dataclass
 class CheckTokenRetrieveSecurity:
-    
     pmo_auth2_authentication: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class CheckTokenRetrieveResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     check_token_retrieve_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

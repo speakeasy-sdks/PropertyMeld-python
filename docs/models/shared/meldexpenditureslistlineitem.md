@@ -1,0 +1,15 @@
+# MeldExpendituresListLineItem
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `created`                                                            | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_check_mark:                                                   | N/A                                                                  |
+| `description`                                                        | *str*                                                                | :heavy_check_mark:                                                   | N/A                                                                  |
+| `expenditures`                                                       | *Optional[int]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `id`                                                                 | *int*                                                                | :heavy_check_mark:                                                   | N/A                                                                  |
+| `quantity`                                                           | *str*                                                                | :heavy_check_mark:                                                   | N/A                                                                  |
+| `unit_cost`                                                          | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `unit_price`                                                         | *str*                                                                | :heavy_check_mark:                                                   | N/A                                                                  |
+| `updated`                                                            | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_check_mark:                                                   | N/A                                                                  |

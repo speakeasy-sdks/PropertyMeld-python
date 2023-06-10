@@ -8,9 +8,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class VendorInvite:
-    
     email: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email') }, 'form': { 'field_name': 'email' }, 'multipart_form': { 'field_name': 'email' }})
     company_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('company_name'), 'exclude': lambda f: f is None }, 'form': { 'field_name': 'company_name' }, 'multipart_form': { 'field_name': 'company_name' }})
     company_phone: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('company_phone'), 'exclude': lambda f: f is None }, 'form': { 'field_name': 'company_phone' }, 'multipart_form': { 'field_name': 'company_phone' }})
@@ -19,3 +19,4 @@ class VendorInvite:
     line_1: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('line_1'), 'exclude': lambda f: f is None }, 'form': { 'field_name': 'line_1' }, 'multipart_form': { 'field_name': 'line_1' }})
     postcode: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('postcode'), 'exclude': lambda f: f is None }, 'form': { 'field_name': 'postcode' }, 'multipart_form': { 'field_name': 'postcode' }})
     
+

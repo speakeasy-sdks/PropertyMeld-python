@@ -11,22 +11,25 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class NotificationSettingsInput:
-    
     incoming_meld_frequency: Optional[shared_incomingmeldfrequencyenum.IncomingMeldFrequencyEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('incoming_meld_frequency'), 'exclude': lambda f: f is None }})
     sms_notifications: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sms_notifications'), 'exclude': lambda f: f is None }})
     successful_meld_frequency: Optional[shared_successfulmeldfrequencyenum.SuccessfulMeldFrequencyEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('successful_meld_frequency'), 'exclude': lambda f: f is None }})
     timezone: Optional[shared_timezoneenum.TimezoneEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timezone'), 'exclude': lambda f: f is None }})
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class NotificationSettings:
-    
     timezone_has_been_set: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timezone_has_been_set') }})
     incoming_meld_frequency: Optional[shared_incomingmeldfrequencyenum.IncomingMeldFrequencyEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('incoming_meld_frequency'), 'exclude': lambda f: f is None }})
     sms_notifications: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sms_notifications'), 'exclude': lambda f: f is None }})
     successful_meld_frequency: Optional[shared_successfulmeldfrequencyenum.SuccessfulMeldFrequencyEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('successful_meld_frequency'), 'exclude': lambda f: f is None }})
     timezone: Optional[shared_timezoneenum.TimezoneEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timezone'), 'exclude': lambda f: f is None }})
     
+

@@ -7,25 +7,30 @@ from ..shared import meldexpenditureslistviewserializerdetail as shared_meldexpe
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class ExpenditureRetrieveSecurity:
-    
     pmo_auth2_authentication: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class ExpenditureRetrieveRequest:
-    
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     x_pm_org: int = dataclasses.field(metadata={'header': { 'field_name': 'X-Pm-Org', 'style': 'simple', 'explode': False }})
     r"""The management ID (MID), found in the first number of your URL when logged in:  https://app.propertymeld.com/{MID}/m/123"""
     
 
+
+
+
 @dataclasses.dataclass
 class ExpenditureRetrieveResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     meld_expenditures_list_view_serializer_detail: Optional[shared_meldexpenditureslistviewserializerdetail.MeldExpendituresListViewSerializerDetail] = dataclasses.field(default=None)
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

@@ -12,9 +12,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class MeldInvoiceListViewUnit:
-    
     building: shared_basebuilding.BaseBuilding = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('building') }})
     display_address: shared_meldinvoicelistdisplayaddress.MeldInvoiceListDisplayAddress = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('display_address') }})
     floor: shared_basefloor.BaseFloor = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('floor') }})
@@ -26,3 +26,4 @@ class MeldInvoiceListViewUnit:
     suite: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('suite'), 'exclude': lambda f: f is None }})
     unit: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unit'), 'exclude': lambda f: f is None }})
     
+

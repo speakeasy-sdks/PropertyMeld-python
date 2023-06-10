@@ -11,9 +11,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class PatchedOwnerInput:
-    
     address: Optional[shared_address.Address] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address'), 'exclude': lambda f: f is None }, 'form': { 'field_name': 'address', 'json': True }, 'multipart_form': { 'field_name': 'address', 'json': True }})
     contact: Optional[shared_contact.Contact] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('contact'), 'exclude': lambda f: f is None }, 'form': { 'field_name': 'contact', 'json': True }, 'multipart_form': { 'field_name': 'contact', 'json': True }})
     email: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email'), 'exclude': lambda f: f is None }, 'form': { 'field_name': 'email' }, 'multipart_form': { 'field_name': 'email' }})
@@ -23,3 +23,4 @@ class PatchedOwnerInput:
     last_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last_name'), 'exclude': lambda f: f is None }, 'form': { 'field_name': 'last_name' }, 'multipart_form': { 'field_name': 'last_name' }})
     properties: Optional[list[int]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('properties'), 'exclude': lambda f: f is None }, 'form': { 'field_name': 'properties' }, 'multipart_form': { 'field_name': 'properties' }})
     
+

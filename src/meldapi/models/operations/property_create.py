@@ -7,17 +7,20 @@ from ..shared import property as shared_property
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PropertyCreateSecurity:
-    
     pmo_auth2_authentication: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class PropertyCreateResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     property: Optional[shared_property.Property] = dataclasses.field(default=None)
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

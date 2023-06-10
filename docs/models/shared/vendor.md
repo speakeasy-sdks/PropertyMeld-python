@@ -1,0 +1,17 @@
+# Vendor
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `address`                                                            | [Address](../../models/shared/address.md)                            | :heavy_check_mark:                                                   | N/A                                                                  |
+| `created`                                                            | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_check_mark:                                                   | N/A                                                                  |
+| `email`                                                              | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `excluded_property_groups`                                           | list[*int*]                                                          | :heavy_check_mark:                                                   | N/A                                                                  |
+| `fax`                                                                | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | Home phone number. Must be in E.164 format, e.g. '+14155552671'.     |
+| `id`                                                                 | *int*                                                                | :heavy_check_mark:                                                   | N/A                                                                  |
+| `is_active`                                                          | *bool*                                                               | :heavy_check_mark:                                                   | N/A                                                                  |
+| `name`                                                               | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `phone`                                                              | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | Home phone number. Must be in E.164 format, e.g. '+14155552671'.     |
+| `updated`                                                            | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_check_mark:                                                   | N/A                                                                  |
